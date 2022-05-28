@@ -1,9 +1,13 @@
 from statistics import mode
 from django.db import models
+from django.forms import CharField
 
 # Create your models here.
-class location (models.Model):
+class Location (models.Model):
     name = models.CharField(max_length=60)
+class Categories (models.Model):
+    name = models.CharField (max_length=60)
+
 class Image (models.Model):
   image = models.ImageField(upload_to = 'images/')
   name = models.CharField(max_length =60)
