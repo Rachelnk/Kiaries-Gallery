@@ -1,3 +1,4 @@
+from email.mime import image
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from .models import Image, Location
@@ -19,6 +20,12 @@ def search_results(request):
     else:
         message = "You haven't searched for any image category"
         return render(request, 'allphotos/search_results.html', {"message": message})
+
+def image_location (request, location):
+    images = Image.filter_by_location(location)
+    print(images)
+    return render (request, 'allphotos/location.html', {'location_image': images})
+
 
 
 
