@@ -1,3 +1,4 @@
+from email.mime import image
 from statistics import mode
 from django.db import models
 from django.forms import CharField
@@ -52,5 +53,14 @@ class Image (models.Model):
 
   def __str__(self):
     return self.name
+
+  @classmethod
+  def update_image(cls, id, value ):
+    cls.objects.filter(id=id).update(image=value)
+
+  @classmethod
+  def filter_by_location(cls, location):
+      image_location = cls.objects.filter(location_name= location).all()
+      return image_location
   
 
