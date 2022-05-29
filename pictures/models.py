@@ -11,7 +11,7 @@ class Location (models.Model):
       return self.name
 
     @classmethod
-    def get_all_location(cls):
+    def get_all_locations(cls):
         locations = Location.objects.all()
         return locations
 
