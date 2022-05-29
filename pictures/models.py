@@ -9,6 +9,9 @@ class Location (models.Model):
     def save_location(self):
         self.save()
 
+    def delete_location(self):
+        self.delete()
+
 
     def __str__ (self):
       return self.name
