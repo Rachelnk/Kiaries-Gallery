@@ -61,6 +61,11 @@ class Image (models.Model):
       self.delete()
 
   @classmethod
+  def get_image(cls, id):
+    image = cls.objects.filter(id=id).all()
+    return image
+
+  @classmethod
   def update_image(cls, id, value ):
     cls.objects.filter(id=id).update(image=value)
 
@@ -68,5 +73,11 @@ class Image (models.Model):
   def filter_by_location(cls, location):
       image_location = cls.objects.filter(location_name= location).all()
       return image_location
-  
+  @classmethod
+  def search_by_category(cls, category):
+    images = cls.objects.filter(category_name_icontains=category)
+
+  class Meta:
+    ordering = ['pub_date']
+
 
