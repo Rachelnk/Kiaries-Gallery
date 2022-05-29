@@ -15,10 +15,9 @@ class Location (models.Model):
         locations = Location.objects.all()
         return locations
 
-    # @classmethod
-    # def update_location(cls, id, value ):
-    #   cls.objects.filter(id=id).update(image=value)
-      
+    @classmethod
+    def update_location(cls, id, value ):
+      cls.objects.filter(id=id).update(location=value)     
 
     def save_location(self):
         self.save()
