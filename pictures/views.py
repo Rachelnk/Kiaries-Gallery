@@ -25,8 +25,9 @@ def search_results(request):
 
 def image_location (request, location):
     location_images = Image.filter_by_location(location)
+    message = f"{location}"
     # print(images)
-    return render (request, 'all-photos/location.html', {'location_image': location_images})
+    return render (request, 'all-photos/location.html', {'results': location_images, 'message': message})
 
 
 
