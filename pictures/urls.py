@@ -7,7 +7,7 @@ urlpatterns = [
   path('', views.index , name = 'index'),
   path('search/', views.search_results, name = 'search'),
   path('location/', views.image_location, name = 'location' ),
-  # path('gallery/', views.gallery, name = 'gallery')
+  path('gallery/', views.gallery, name = 'gallery')
 
 ]
 if settings.DEBUG:

@@ -7,10 +7,10 @@ from .models import Image, Location
 def index(request):  
   return render (request, 'all-photos/index.html')
 def gallery(request):
-  images = Image.objects.all()
+  images = Image.get_all_images()
   locations = Location.get_all_locations()
   print(locations)
-  return render (request, 'all-photos/gallery.html')
+  return render (request, 'all-photos/gallery.html', {'images' : images, 'locations': locations})
 
 def search_results(request):
     if 'category' in request.GET and request.GET["category"]:
