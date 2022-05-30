@@ -4,9 +4,11 @@ body {
   background-repeat:no-repeat;
   background-position:center;
   background-size:cover;
+  background-attachment:fixed;
 }
 .index-h {
   color: white;
   font-size: 40px;
+  margin-top:2%;
   font-family: 'Indie Flower', cursive;
 }
