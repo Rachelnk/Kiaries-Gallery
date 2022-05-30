@@ -73,8 +73,9 @@ class Image (models.Model):
       image_location = cls.objects.filter(location_name= location).all()
       return image_location
   @classmethod
-  def search_by_category(cls, category):
-    images = cls.objects.filter(category_name_icontains=category)
+  def search_by_category(cls, search_term):
+    images = cls.objects.filter(category__name__icontains=search_term)
+    return images
 
   class Meta:
     ordering = ['pub_date']
