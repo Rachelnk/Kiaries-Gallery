@@ -12,3 +12,9 @@ body {
   margin-top:2%;
   font-family: 'Indie Flower', cursive;
 }
+.modalcard{
+  background-color:rgba(10,10,10,0.8);
+  color:white;
+  padding:3%;
+  border:none;
+  }
