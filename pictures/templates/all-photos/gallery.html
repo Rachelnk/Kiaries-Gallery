@@ -58,7 +58,7 @@
                         <div class="modal-footer">
                             <input class="form-control input-lg" type="text"
                                    value="{{image.image.url}}" id="{{image.id}}.url">
-                            <button class="btn btn-success btn-sm" onclick="copyLink('{{image.id}}.url')">Copy</button>
+                            <button type="button" class="btn btn-success btn-sm" value= "{{image.id}}.url" onclick="copyLink(this.value)">Copy</button>
                             <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
                             </button>
                         </div>
