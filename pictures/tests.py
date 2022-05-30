@@ -86,7 +86,7 @@ class TestImage(TestCase):
 
     def test_search_image_by_location(self):
         self.image_test.save_image()
-        found_images = self.image_test.filter_by_location(location='moringa')
+        found_images = self.image_test.filter_by_location(location='Nairobi')
         self.assertTrue(len(found_images) == 1)
 
     def test_search_image_by_category(self):
