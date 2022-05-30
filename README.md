@@ -19,7 +19,7 @@
 `$ git clone https://github.com/Rachelnk/Kiaries-Gallery.git`
 *
 * Navigate into the folder
-* `cd Kiarie-Blog` and `pip install -r requirements.txt`
+* `cd Kiaries-Blog` and `pip install -r requirements.txt`
 * 
 ### Creating virtual environment
 * `python3 -m venv virtual`
@@ -32,7 +32,7 @@
 ### Running the application
 * python manage.py runserver
 
-### Testing the Application
+# Testing the Application
 ## To run the test cases:
 `python3 manage.py test`
 
