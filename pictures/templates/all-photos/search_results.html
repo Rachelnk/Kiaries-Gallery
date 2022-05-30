@@ -2,6 +2,11 @@
 
 {% block content %}
 <div class="container">
+  <div class="row">
+    <div class="col-md-5">
+     <h3 class = "gallery-link"><a href="{% url 'gallery' %}">..Back to Gallery</a></h3> 
+    </div>
+  </div>
 
   {% if images %}
   <h2 class="text-center" id="found">Found {{ images|length }} images in '{{message}}' category</h2>
