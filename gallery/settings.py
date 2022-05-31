@@ -16,6 +16,10 @@ import pictures
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
+import cloudinary
+import cloudinary.api
+import cloudinary.uploader
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pictures',
     'bootstrap4',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -157,3 +162,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import django_heroku
 django_heroku.settings(locals())
 CSRF_TRUSTED_ORIGINS=['https://*.herokuapp.com']
+
+# Cloudinary configurations
+cloudinary.config( 
+  cloud_name = "kiaries-gallery", 
+  api_key = "343145548373335", 
+  api_secret = "oNEicoCy_M9UqMwBjoRC1fyPAuE",
+  secure = True
+)

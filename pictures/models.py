@@ -2,6 +2,7 @@ from email.mime import image
 from statistics import mode
 from django.db import models
 from django.forms import CharField
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Location (models.Model):
@@ -41,7 +42,8 @@ class Categories (models.Model):
       return self.name
 
 class Image (models.Model):
-  image = models.ImageField(upload_to = 'images/')
+  # image = models.ImageField(upload_to = 'images/')
+  image = CloudinaryField('image')
   name = models.CharField(max_length =60)
   description = models.TextField()
   uploadby = models.CharField(max_length= 60, default='admin')
