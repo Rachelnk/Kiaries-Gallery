@@ -25,11 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+DEBUG = False
 MODE= config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+
 
 ALLOWED_HOSTS = []
 
@@ -82,26 +83,30 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-if config('MODE')=="dev":
-    DATABASES = {
+# if config('MODE')=="dev":
+DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': config('DB_NAME'),
-            'USER' : config('DB_USER'),
-            'PASSWORD' : config('DB_PASSWORD'),
-            'HOST' : config('DB_HOST'),
-            'PORT' : '',
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'gallery' ,
+        'USER' : 'kiarie' ,
+        'PASSWORD' : 'rayray' ,
+        'HOST' : '' ,
+        'PORT' : '',
+        # DB_HOST='127.0.0.1'
+        # DB_NAME = 'gallery'
+        # DB_USER ='kiarie'
+        # DB_PASSWORD = 'rayray'
         }
     }
 # production
-else:
-   DATABASES = {
-       'default': dj_database_url.config(
-           default=config('DATABASE_URL')
-       )
-   }
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# else:
+#    DATABASES = {
+#        'default': dj_database_url.config(
+#            default=config('DATABASE_URL')
+#        )
+#    }
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 
 # Password validation
