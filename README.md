@@ -1,7 +1,7 @@
 # Kiaries-Gallery
 
 ## Description
-##### This is an application is a personal gallery whereby users can upload images, search pictures in certain categories i.e. art, food, travel. They can also view filter images by location. Users can share the images by copying the image link.
+##### This is a personal gallery whereby users can view uploaded images, search for pictures in certain categories i.e. art, food, travel. They can also view filter images by location. Users can share the images by copying the image link.
 
 ## Authors
 #### Rachel Kiarie
